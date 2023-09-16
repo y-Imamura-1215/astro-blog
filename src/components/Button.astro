@@ -1,0 +1,32 @@
+---
+const { title } = Astro.props;
+---
+
+<button
+  type='button'
+  class='button'
+>
+  {title}
+</button>
+
+<style>
+  .button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border: none;
+    background-color: #2a233e;
+    color: #ff7e33;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  const button = document.querySelector('.button');
+  button.addEventListener('click', () => {
+    alert('クリックされました');
+  });
+</script>
